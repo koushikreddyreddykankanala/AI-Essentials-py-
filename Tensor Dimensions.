@@ -1,0 +1,32 @@
+import torch
+
+#1. Scaler (0-D Tensor)
+scalar = torch.tensor(5)
+print("Scalar:", scalar)
+print("Scalar Dimension:", scalar.ndim)
+print()
+
+#2. Vector (1-D Tensor)
+vector = torch.tensor([1, 2, 3, 4])
+print("Vector Shape:", vector.shape)
+print("Vector Dimension:", vector.ndim)
+print()
+
+#3. Matrix (2-D Tensor)
+matrix = torch.tensor([[1,2,3],
+                       [4,5,6]])
+print("Matrix:\n", matrix)
+print("Matrix Shape:", matrix.shape)
+print("Matrix Dimension:", matrix.ndim)
+print()
+
+#4.3-D Torch (Example)
+tensor_3d = torch.tensor([
+    [[1,2], [3,4]],
+    [[5,6], [7,8]],
+    [[3,4],[10,12]]
+])
+print("3-D Tensor:\n", tensor_3d)
+print("3-D Tensor Shape:", tensor_3d.shape)
+print("3-D Tensor Dimension:", tensor_3d.ndim)
+print()
