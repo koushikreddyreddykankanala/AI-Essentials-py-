@@ -1,0 +1,28 @@
+def chatbot():
+  print("Chatbot: Hello! Type 'bye' to exit")
+
+  responses = {
+      "greeting": ["hello", "hi", "hey"],
+      "name": ["your name", "who are you"],
+      "help": ["help", "assist"],
+  }
+
+  while True:
+    user_input = input("You: ").lower()
+
+    if user_input == "bye":
+      print("Chatbot: Goodbye!")
+      break
+
+    elif any(word in user_input for word in responses["greeting"]):
+      print("Chatbot: Hi there!")
+
+    elif any(word in user_input for word in responses["name"]):
+      print("Chatbot: I am your assistant bot.")
+
+    elif any(word in user_input for word in responses["help"]):
+      print(" Chatbot: Ask me simple questions!")
+
+    else:
+      print("Chatbot: I don't understand that yet.")
+chatbot()
